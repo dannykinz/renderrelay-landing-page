@@ -9,7 +9,7 @@
     --text-grey: #b3b7be;
     --border: rgba(128, 128, 128, 0.3);
     --heading: 4rem;
-    --subheadings: 3rem;
+    --subheadings: 2.6rem;
     --paragraphs: 1.125rem;
     --captions: 1rem;
     --subtext: 0.875rem;
@@ -120,6 +120,34 @@ a:hover {
     justify-content: center;
 }
 
+.spacing {
+    margin-top: var(--spacing);
+}
+
+/* Sections Header */
+.sections_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.sections_header h4 {
+    font-size: var(--captions);
+    font-weight: 300;
+    color: var(--primary);
+    background-color: rgba(70, 203, 211, 0.1);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.sections_header h2 {
+    font-size: var(--subheadings);
+}
+
 /* Navbar */
 
 .navbar {
@@ -129,6 +157,7 @@ a:hover {
     top: 0;
     backdrop-filter: blur(40px);
     border-bottom: 1px solid var(--border);
+    z-index: 9;
 }
 
 .navbar_menu {
@@ -253,7 +282,9 @@ a:hover {
     width: 100%;
 }
 
-.trust_card {
+.trust_card,
+.solution_card,
+.how_it_works_card {
     background-color: var(--background-shade);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
@@ -265,7 +296,10 @@ a:hover {
     transition: all 0.3s ease-in;
 }
 
-.trust_card:hover {
+.trust_card:hover,
+.solution_card:hover,
+.how_it_works_card:hover {
+    border-color: rgba(70, 203, 211, 0.4);
     transform: scale(0.98);
     background: linear-gradient(80deg, transparent, rgba(70, 203, 211, 0.2));
 }
@@ -276,5 +310,95 @@ a:hover {
 }
 
 .trust_card p {
+    font-size: var(--paragraphs);
+}
+
+/* Solutions Section */
+
+.solutions_section,
+.how_it_works_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.solutions_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    gap: 24px;
+}
+
+.solution_card {
+    flex-direction: column;
+    align-items: start;
+    width: auto;
+    height: 100%;
+}
+
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.medium {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.solution_contents {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+}
+
+.solution_contents h3 {
+    font-size: var(--paragraphs);
+}
+
+.solution_contents p {
+    font-size: var(--subtext);
+}
+
+.large h3 {
+    font-size: 1.8rem;
+}
+
+.large p {
+    font-size: var(--captions);
+}
+
+.medium img {
+    width: 60px;
+    height: auto;
+}
+
+/* How it works section */
+
+.how_it_works_cards {
+    display: flex;
+    gap: 24px;
+}
+
+.how_it_works_card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.how_it_works_card i {
+    font-size: 2.6rem;
+    color: var(--primary);
+}
+
+.how_it_works_card p {
+    font-size: var(--captions);
+}
+
+.how_it_works_card h3 {
     font-size: var(--paragraphs);
 }
