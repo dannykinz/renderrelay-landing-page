@@ -130,7 +130,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    max-width: 600px;
+    max-width: 550px;
     text-align: center;
 }
 
@@ -146,6 +146,10 @@ a:hover {
 
 .sections_header h2 {
     font-size: var(--subheadings);
+}
+
+.sections_header p {
+    font-size: var(--paragraphs);
 }
 
 /* Navbar */
@@ -284,7 +288,9 @@ a:hover {
 
 .trust_card,
 .solution_card,
-.how_it_works_card {
+.how_it_works_card,
+.smart_features_card,
+.testimony_card {
     background-color: var(--background-shade);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
@@ -298,7 +304,9 @@ a:hover {
 
 .trust_card:hover,
 .solution_card:hover,
-.how_it_works_card:hover {
+.how_it_works_card:hover,
+.smart_features_card:hover,
+.testimony_card:hover {
     border-color: rgba(70, 203, 211, 0.4);
     transform: scale(0.98);
     background: linear-gradient(80deg, transparent, rgba(70, 203, 211, 0.2));
@@ -316,7 +324,11 @@ a:hover {
 /* Solutions Section */
 
 .solutions_section,
-.how_it_works_section {
+.how_it_works_section,
+.smart_features_section,
+.pricing_section,
+.testimonies_section,
+.faq_section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -378,27 +390,457 @@ a:hover {
 
 /* How it works section */
 
-.how_it_works_cards {
+.how_it_works_cards,
+.smart_features_cards,
+.pricing_cards {
     display: flex;
     gap: 24px;
 }
 
-.how_it_works_card {
+.how_it_works_card,
+.smart_features_card {
     flex-direction: column;
     width: 100%;
     height: auto;
     text-align: center;
 }
 
-.how_it_works_card i {
+.how_it_works_card i,
+.smart_features_card i {
     font-size: 2.6rem;
     color: var(--primary);
 }
 
-.how_it_works_card p {
+.how_it_works_card p,
+.smart_features_card p {
     font-size: var(--captions);
 }
 
-.how_it_works_card h3 {
+.how_it_works_card h3,
+.smart_features_card h3 {
     font-size: var(--paragraphs);
+}
+
+/* Our Tools Section */
+
+.our_tools_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+}
+
+.our_tools_contents {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    max-width: 500px;
+}
+
+.our_tools_contents h2 {
+    font-size: var(--subheadings);
+}
+
+.our_tools_contents p {
+    font-size: var(--paragraphs);
+}
+
+.our_tools_contents span {
+    font-size: var(--subtext);
+    color: var(--primary);
+    padding-right: 120px;
+}
+.our_tools_img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.our_tools_img img {
+    width: 75%;
+    height: auto;
+}
+
+.smart_features_cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.smart_features_card {
+    width: 23%;
+}
+
+/* Pricing Section */
+
+.pricing_cards {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pricing_card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px 30px;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.pricing_card h4 {
+    font-size: 1.8rem;
+}
+
+.pricing_card p {
+    font-size: var(--paragraphs);
+}
+
+.pricing_card ul {
+    list-style-type: square;
+    color: var(--primary);
+    padding-left: 24px;
+}
+
+.pricing_card li::marker {
+    color: var(--primary);
+}
+
+.pricing_card ul li {
+    font-size: var(--subtext);
+    color: var(--text-grey);
+}
+
+.pricing_card a {
+    width: 100%;
+    text-align: center;
+}
+
+.recommended {
+    border-color: var(--primary);
+}
+
+.recommended h4 {
+    color: var(--primary);
+}
+
+.pricing_copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Testimonies Section */
+.testimonies_cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border);
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.testimony_card {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.testimony_card p {
+    font-size: var(--paragraphs);
+}
+
+.rating_star {
+    font-size: 1.2rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.testimony_user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.testimony_user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.testimony_user_content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+}
+
+.testimony_user_content h4 {
+    font-size: var(--paragraphs);
+}
+
+.testimony_user_content p {
+    font-size: var(--subtext);
+}
+
+/* FAQ Section */
+.faq_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    max-width: 600px;
+}
+
+.faq_item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+.faq_item:hover {
+    border-color: rgba(70, 203, 211, 0.4);
+    transform: scale(0.98);
+}
+
+.faq_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.faq_header h3 {
+    font-size: var(--paragraphs);
+}
+
+.faq_header i {
+    font-size: var(--paragraphs);
+    color: var(--text-white);
+}
+
+.faq_item p {
+    font-size: var(--captions);
+    max-height: 0px;
+    padding-top: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+/* CTA Section */
+
+.cta_section {
+    background: linear-gradient(80deg, transparent, rgba(70, 203, 211, 0.2));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.cta_section h2 {
+    font-size: var(--heading);
+}
+.cta_section p {
+    font-size: var(--paragraphs);
+}
+
+/* Footer Section */
+
+.footer_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 34px;
+}
+
+.footer_items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer_item,
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+}
+
+.footer_item img {
+    width: 200px;
+    height: auto;
+}
+
+.footer_item h3 {
+    font-size: var(--paragraphs);
+}
+
+.footer_links_item {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.footer_section p {
+    font-size: var(--captions);
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    :root {
+        --heading: 3rem;
+        --subheadings: 2rem;
+        --paragraphs: 1rem;
+        --spacing: 100px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero_wrapper {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .hero_image img {
+        width: 100%;
+    }
+
+    .trust_row {
+        flex-wrap: wrap;
+    }
+
+    .trust_card {
+        width: 45%;
+    }
+
+    .solutions_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .medium {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .how_it_works_cards,
+    .smart_features_cards,
+    .pricing_cards,
+    .our_tools_section,
+    .footer_items,
+    .footer_links_item {
+        flex-direction: column;
+    }
+
+    .how_it_works_card,
+    .smart_features_card,
+    .pricing_card,
+    .testimony_card {
+        width: 100%;
+    }
+
+    .testimonies_cards {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .our_tools_section,
+    .footer_links_item {
+        gap: 60px;
+    }
+
+    .our_tools_contents {
+        max-width: 100%;
+    }
+
+    .our_tools_contents span {
+        padding-right: 0px;
+    }
+
+    .our_tools_img {
+        justify-content: center;
+    }
+
+    .our_tools_img img {
+        width: 100%;
+    }
+
+    .footer_section {
+        padding-bottom: 30px;
+    }
+
+    /* Navbar */
+    .navbar_menu {
+        position: relative;
+    }
+
+    .navbar_menu img {
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar_links {
+        display: none;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        left: 0;
+        width: calc(100% + (2 * var(--container-padding, 16px)));
+        margin-left: calc(-1 * var(--container-padding, 16px));
+        margin-right: calc(-1 * var(--container-padding, 16px));
+        background-color: rgba(18, 18, 23, 0.9);
+        padding: 48px 0px;
+        backdrop-filter: blur(40px);
+        border-bottom: 1px solid var(--border);
+        z-index: 9;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        transition: top 0.3s ease-in;
+    }
+
+    .navbar_links a {
+        font-size: 1.4rem;
+        color: var(--text-white);
+    }
+
+    .navbar_btns {
+        display: none;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+
+    .mobile_menu i {
+        font-size: 2rem;
+        color: var(--text-white);
+    }
 }
