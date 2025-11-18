@@ -844,3 +844,109 @@ a:hover {
         color: var(--text-white);
     }
 }
+
+/* Tablet Responsiveness */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --heading: 3rem;
+        --subheadings: 2.2rem;
+    }
+    .container {
+        padding: 0 24px;
+    }
+    .hero_wrapper {
+        gap: 40px;
+    }
+
+    .hero_content {
+        max-width: 100%;
+    }
+    .hero_image img {
+        width: 350px;
+    }
+
+    /* Navbar */
+    .navbar_menu {
+        position: relative;
+    }
+
+    .navbar_menu img {
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar_links {
+        display: none;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        left: 0;
+        width: calc(100% + (2 * var(--container-padding, 16px)));
+        margin-left: calc(-1 * var(--container-padding, 16px));
+        margin-right: calc(-1 * var(--container-padding, 16px));
+        background-color: rgba(18, 18, 23, 0.9);
+        padding: 48px 0px;
+        backdrop-filter: blur(40px);
+        border-bottom: 1px solid var(--border);
+        z-index: 9;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        transition: top 0.3s ease-in;
+    }
+
+    .navbar_links a {
+        font-size: 1.4rem;
+        color: var(--text-white);
+    }
+
+    .navbar_btns {
+        display: none;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+
+    .mobile_menu i {
+        font-size: 2rem;
+        color: var(--text-white);
+    }
+
+    .how_it_works_card {
+        width: 28%;
+    }
+
+    .smart_features_card {
+        width: 31%;
+    }
+
+    .how_it_works_cards,
+    .testimonies_cards {
+        gap: 8px;
+    }
+
+    .smart_features_cards {
+        gap: 16px;
+        justify-content: start;
+    }
+
+    .testimony_card {
+        width: 32%;
+    }
+
+    .footer_section {
+        padding-bottom: 32px;
+    }
+
+    .pricing_cards {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .pricing_card {
+        width: 48%;
+    }
+}
