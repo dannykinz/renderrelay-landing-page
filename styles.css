@@ -796,6 +796,10 @@ a:hover {
         padding-bottom: 30px;
     }
 
+    .cta_section h2 {
+        font-size: 1.8rem;
+    }
+
     /* Navbar */
     .navbar_menu {
         position: relative;
